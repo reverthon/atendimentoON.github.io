@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* branco gelo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #e3f2fd; /* azul marinho bebê */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%; /* Utilizando porcentagem para ajuste responsivo */
+    max-width: 400px; /* Definindo largura máxima para melhor legibilidade */
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #1a237e; /* azul marinho mais escuro */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #1a237e; /* azul marinho mais escuro */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.create-account {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.create-account a {
+    color: #1a237e; /* azul marinho mais escuro */
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query para telas menores, como celulares */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%; /* Ajustando largura para telas menores */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Acesse sua conta</h2>
+        <form id="loginForm" action="seu_script_backend.php" method="post">
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="userType" class="option-label">Sou um:</label>
+                <select id="userType" name="userType" required>
+                    <option value="">Selecione...</option>
+                    <option value="cliente">Paciente</option>
+                    <option value="medico">Médico</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+        <div class="create-account">
+            <p>Não possui uma conta? <a href="pagina_criacao_conta.html">Crie uma aqui</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
