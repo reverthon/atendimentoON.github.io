@@ -16,6 +16,10 @@ body {
     width: 90%; /* Utilizando porcentagem para ajuste responsivo */
     max-width: 400px; /* Definindo largura máxima para melhor legibilidade */
     text-align: center;
+    height: 70vh; /* Definindo altura como 70% da altura da viewport */
+    min-height: 300px; /* Definindo altura mínima */
+    max-height: 600px; /* Definindo altura máxima */
+    overflow: auto; /* Permitindo rolagem se o conteúdo ultrapassar a altura máxima */
 }
 
 .signup-container h2 {
@@ -58,7 +62,7 @@ body {
 }
 
 .form-group button:hover {
-    background-color:  #1a7e1f;; /* azul marinho mais forte */
+    background-color: #1a7e1f; /* azul marinho mais forte */
 }
 
 /* Media Query para telas menores, como celulares */
